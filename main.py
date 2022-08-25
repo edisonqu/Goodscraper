@@ -7,8 +7,8 @@ import PIL
 
 #also need to install Pillow
 
-#This is where you can change which hashtag to use
-hashtag = 'wellness'
+#This is where you can change which hashtag to use, NO CAPITALS
+hashtag = 'anxiety'
 
 #These are the list of suffixes to find in the Instagram Profile, you can add more by adding a comma and wrapping the word with ''
 suffixes = ['M.D','Drs','Dr.','MDs', 'MD','dr','do','md','m.d.' 'dra','medicine','d.c','therapist','nutrition','np','N.P.','N.P','health', 'diet','coach','diet','medicine','clinic','founder', hashtag,'blog','nonprofit','profit','practioner']
@@ -16,7 +16,7 @@ suffixes = ['M.D','Drs','Dr.','MDs', 'MD','dr','do','md','m.d.' 'dra','medicine'
 #This is how many account you could screen, I went up to 4000 at one point but it might take a very very very long time to generate and failure could be very possible
 
 #I would recommend the 100-200 range, or even lower
-numberOfAccounts = 300
+numberOfAccounts = 3
 
 
 #DOWNLOAD AS A ZIP FILE AFTER RUNNING.
@@ -27,7 +27,7 @@ cl = Client()
 
 cl.login("husssssssstle", "T22VYXFNJwnJQ3a")
 
-print("works")
+print("Logged in ")
 
 workbook = xlsxwriter.Workbook('Contacts.xlsx')
 worksheet = workbook.add_worksheet()
@@ -136,4 +136,4 @@ workbook.close()
 for i in range(8):
   print()
 
-print('FINISHED PLEASE DOWNLOAD AS A ZIP FILE.')
+print('OPEN THE CONTACTS.XLSX')
