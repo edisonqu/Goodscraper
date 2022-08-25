@@ -8,7 +8,7 @@ import PIL
 #also need to install Pillow
 
 #This is where you can change which hashtag to use, NO CAPITALS
-hashtag = 'anxiety'
+hashtag = 'bronchitis'
 
 #These are the list of suffixes to find in the Instagram Profile, you can add more by adding a comma and wrapping the word with ''
 suffixes = ['M.D','Drs','Dr.','MDs', 'MD','dr','do','md','m.d.' 'dra','medicine','d.c','therapist','nutrition','np','N.P.','N.P','health', 'diet','coach','diet','medicine','clinic','founder', hashtag,'blog','nonprofit','profit','practioner']
@@ -136,4 +136,5 @@ workbook.close()
 for i in range(8):
   print()
 
+print("Total pulled:",len(usernames))
 print('OPEN THE CONTACTS.XLSX')
