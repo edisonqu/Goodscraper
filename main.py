@@ -27,7 +27,8 @@ cl = Client()
 
 # cl.login("husssssssstle", "T22VYXFNJwnJQ3a")
 # cl.login("country.clubs", "cachetcountryclub")
-cl.login("healthissssick", "healthisthenewwealth")
+cl.login("eifw4", "healthisthenewwealth")
+# cl.login("healthissssick", "healthisthenewwealth")
 
 print("Logged in ")
 
