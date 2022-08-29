@@ -25,7 +25,9 @@ cl = Client()
 
 #This is the instagram account used, ignore the too many requests error and continue login
 
-cl.login("husssssssstle", "T22VYXFNJwnJQ3a")
+# cl.login("husssssssstle", "T22VYXFNJwnJQ3a")
+# cl.login("country.clubs", "cachetcountryclub")
+cl.login("healthissssick", "healthisthenewwealth")
 
 print("Logged in ")
 
