@@ -1,5 +1,5 @@
 #messy code at the moment, will clean up later
-
+from random import random
 
 import xlsxwriter
 from instagrapi import *
@@ -24,12 +24,7 @@ numberOfAccounts = 3
 cl = Client()
 
 #This is the instagram account used, ignore the too many requests error and continue login
-
-# cl.login("otheraccountss2022", "healthisthenewwealth")
-cl.login("legitimate_accountss", "healthisthenewwealth")
-
-
-
+cl.login("country.clubs", "cachetcountryclub")
 print("Logged in ")
 
 workbook = xlsxwriter.Workbook('Contacts.xlsx')
@@ -61,6 +56,7 @@ data = []
 contact = []
 users_list = []
 medias = cl.hashtag_medias_top(hashtag, amount=numberOfAccounts)
+
 for media in medias:
     userZ = cl.user_info_by_username(media.user.username)
     print(userZ)
