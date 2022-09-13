@@ -16,7 +16,7 @@ suffixes = ['M.D','Drs','Dr.','MDs', 'MD','dr','do','md','m.d.' 'dra','medicine'
 #This is how many account you could screen, I went up to 4000 at one point but it might take a very very very long time to generate and failure could be very possible
 
 #I would recommend the 100-200 range, or even lower
-numberOfAccounts = 3
+numberOfAccounts = 1
 
 
 #DOWNLOAD AS A ZIP FILE AFTER RUNNING.
@@ -24,7 +24,8 @@ numberOfAccounts = 3
 cl = Client()
 
 #This is the instagram account used, ignore the too many requests error and continue login
-cl.login("country.clubs", "cachetcountryclub")
+cl.login("goodyprotew", "healthisthenewwealth")
+
 print("Logged in ")
 
 workbook = xlsxwriter.Workbook('Contacts.xlsx')
@@ -83,7 +84,6 @@ for media in medias:
                     theSuffix.append(suffix)
                     email.append(userZ.public_email)
                     contact.append(userZ.business_contact_method)
-
                     missed_usernames.remove(userZ.username)
                     missed_full_names.remove((userZ.full_name))
                     missed_external_links.remove(userZ.external_url)
@@ -97,22 +97,22 @@ for media in medias:
 print(len(missed_usernames),len(missed_biography),len(missed_followers),len(missed_full_names),len(missed_profile_link),len(missed_external_links))
 
 for i in range(len(usernames)):
-    data.append(['#', hashtag, '',usernames[i], '', full_names[i], '', '',external_links[i],profile_link[i],followers[i],theSuffix[i],email[i],contact[i], biography[i]])
+    data.append(['#', hashtag, '',usernames[i], '', full_names[i], '', '',external_links[i],profile_link[i],followers[i],theSuffix[i],email[i],contact[i],'',biography[i]])
 
 for i in range(len(missed_usernames)):
-    data.append(['#', hashtag, '',missed_usernames[i], '', missed_full_names[i], '', '',missed_external_links[i],missed_profile_link[i],missed_followers[i],'', missed_email[i],missed_contact[i],missed_biography[i]])
+    data.append(['#', hashtag, '',missed_usernames[i], '', missed_full_names[i], '', '',missed_external_links[i],missed_profile_link[i],missed_followers[i],'', missed_email[i],missed_contact[i],'',missed_biography[i]])
 
 
 
 worksheet.add_table('A1:P1000',{'data':data,
                 'columns':            [{'header': 'Valid'},
                                       {'header': 'Hashtag'},
-                                      {},
+                                      {'header':''},
                                       {'header': 'Username'},
-                                      {},
+                                      {'header':''},
                                       {'header': 'Name'},
-                                      {},
-                                      {},
+                                      {'header':''},
+                                      {'header':''},
                                       {'header': 'External Link'},
                                       {'header': 'Profile Link'},
                                       {'header': 'Follower Count',
